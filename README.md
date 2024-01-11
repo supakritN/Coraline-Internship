@@ -3,6 +3,9 @@
 #### requirement
 - python
 
+#### limitation
+- Some data (usually in Arabic name) can not predict by the api.genderize.io
+
 #### at ex2/ directory
 
 Step1: create a virtual environment
@@ -30,7 +33,7 @@ Step3: install libary from requirements.txt
 pip install -r requirements.txt
 ```
 
-Step4: run the python_script.py (This command will create 20 rows as a default)
+Step4: run the python_script.py (This command will create 20 rows at ./dataframe.csv as a default)
 ``` 
 python python_script.py
 ```
