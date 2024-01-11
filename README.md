@@ -38,3 +38,8 @@ If you want to change the number of output to others. Change the \<number of out
 ``` 
 python python_script.py --size <number of output>
 ```
+If you want to change the destination of the output. Change the \<path to saved> to the path you like.
+- note that the \<path to saved> should be in "file.csv" or others for saving the dataframe and not be the directory.  
+``` 
+python python_script.py --size <number of output> --path <path to saved>
+```

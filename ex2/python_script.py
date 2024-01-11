@@ -7,7 +7,8 @@ import argparse
 # Create the parser
 parser = argparse.ArgumentParser(description='This script is to create dataframe.csv of 20 people with gender prediction and the results.')
 # Add arguments with default values
-parser.add_argument('--size', type=int, default=20, help='An size argument with a default value of 20')
+parser.add_argument('--size', type=int, default=20, help='An size argument with a default value of 20, the size argument is for change the number of output rows.')
+parser.add_argument('--path', type=str, default="./dataframe.csv", help='An size argument with a default value of ./dataframe.csv, the path argument is for select where the output will be saved at.')
 # Parse the arguments
 args = parser.parse_args()
 # request https://randomuser.me/api/?results=20
@@ -25,5 +26,5 @@ for user in users:
 # convert to DataFrame and print
 df = pd.DataFrame(users)
 # save the dataframe
-df.to_csv('dataframe.csv', index=False)
+df.to_csv(args.path, index=False)
 print(df[['first_name', 'last_name', 'gender (actual)', 'gender (predict)', 'probability', 'same_gender']])
