@@ -3,6 +3,8 @@
 #### requirement
 - python
 
+#### at ex2/ directory
+
 Step1: create a virtual environment
 ```
 python -m venv .venv
